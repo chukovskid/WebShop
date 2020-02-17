@@ -10,7 +10,7 @@ namespace MyShop.DataAccess.InMemory
    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
-        List<Product> products = new List<Product>();
+        List<Product> products;
 
         public ProductRepository()
         {
