@@ -23,7 +23,7 @@
 
         <div class="col-md-4" style="height:450px;padding:10px;margin:10px;border: solid thin whitesmoke">
             <div class="col-md-12">
-                <img class="img" style="height:250px; width:250px" src="~/Content/ProductImages/@item.Image" />
+                <img  class="img" style="height:250px; width:250px" src="~/Content/ProductImages/@item.Image" />
             </div>
             <div class="col-md-12">
 
@@ -37,7 +37,7 @@
                 <h4>@item.Price</h4>
             </div>
             <div class="col-md-12">
-                <a href="#" class="btn btn-default">Add to Basket</a>
+                <a href="@Url.Action("AddToBasket", "Basket", new { Id = item.Id })" class="btn btn-default">Add to Basket</a>
             </div>
         </div>
     }

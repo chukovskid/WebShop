@@ -25,6 +25,11 @@ namespace MyShop.DataAccess.SQL
             return dbSet;
         }
 
+        public T Find(string Id)
+        {
+            return dbSet.Find(Id);
+        }
+
         public void Commit()
         {
             context.SaveChanges();
@@ -39,12 +44,7 @@ namespace MyShop.DataAccess.SQL
             dbSet.Remove(t);
          }
 
-        public T Find(string Id)
-        {
-            return dbSet.Find(Id);
-        }
-
-        public void Insert(T t)
+         public void Insert(T t)
         {
             dbSet.Add(t);
         }
